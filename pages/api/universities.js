@@ -4,6 +4,9 @@ import dbConnect from '../../utils/dbConnect';
 export default async function handler(req, res) {
   await dbConnect();
 
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+
   if (req.method === 'GET') {
     try {
       const universities = await University.find();
