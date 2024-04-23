@@ -1,0 +1,10 @@
+import React from "react";
+
+const Portal=()=>{
+    return(
+        <div>
+            <h1>Portal Page</h1>
+        </div>
+    )
+}
+export default Portal
